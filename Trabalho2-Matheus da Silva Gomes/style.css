@@ -1,0 +1,110 @@
+/* Estilo para o plano de fundo da página com uma imagem */
+body {
+    font-family: "Comic Sans MS", cursive;
+    background-image: url('planoFundo.jpg'); 
+    background-size: cover;        
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    background-position: center;   
+    margin: 0;
+}
+
+/* Estilo para a lista de Pokémon */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para centralizar a barra de pesquisa e ajustá-la */
+.search-bar {
+    display: flex;               
+    justify-content: center;
+    margin-top: 30px;     
+    margin-bottom: 20px;
+    position: sticky;   /* Faz com que a barra fique fixa ao rolar a página */
+    top: 0;             /* Fixa a barra no topo da janela de visualização */
+    z-index: 10;        /* Garante que a barra fique sobre outros elementos */
+    background-color: #f5f5f5; /* Define uma cor de fundo */
+    padding: 10px 0;    /* Adiciona preenchimento para maior visibilidade */   
+    background-color: transparent;
+}
+
+.search-bar input {
+    width: 50%;                  
+    max-width: 600px;            
+    padding: 12px;               
+    font-size: 16px;             
+    border: 2px solid #ccc;      
+    border-radius: 8px;          
+    outline: none;               
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease; 
+}
+
+.search-bar input:focus {
+    border-color: #FFA07A;       
+}
+
+
+/* Estilo para o card de Pokémon */
+.pokemon-card {
+    text-align: center;
+    flex-grow: 1;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid hsl(240, 43%, 1%); 
+    border-radius: 8px; 
+}
+
+
+/* Estilo para a imagem do Pokémon */
+.pokemon-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Espaçamento entre os elementos de texto no card */
+.pokemon-card p {
+    margin: 5px 0;
+}
+
+/* Cores dos tipos de Pokémon e bordas dos cards */
+.fire { background-color: #c27e10; border: 3px solid #FF4500; }
+.grass { background-color: #4CAF50; border: 3px solid #32CD32; }
+.water { background-color: #00BFFF; border: 3px solid #1E90FF; }
+.bug { background-color: #98e880; border: 3px solid #A9DFBF; }
+.normal { background-color: #A9A9A9; border: 3px solid #B0C4DE; }
+.poison { background-color: #9e5cda; border: 3px solid #8A2BE2; }
+.electric { background-color: #ffd365; border: 3px solid #FFD700; }
+.ground { background-color: #9e7e52; border: 3px solid #DEB887; }
+.ghost { background-color: #5626de; border: 3px solid #483D8B; }
+.fighting { background-color: #e21811f8; border: 3px solid #CD5C5C; }
+.psychic { background-color: #e39fa4; border: 3px solid #FF69B4; }
+.rock { background-color: #897975; border: 3px solid #8B4513; }
+.ice { background-color: #42bed3; border: 3px solid #00CED1; }
+.steel { background-color: #999999; border: 3px solid #B0C4DE; }
+.dark { background-color: #12124f; border: 3px solid #000080; }
+.flying { background-color: #23f1c7; border: 3px solid #87CEEB; }
+.fairy { background-color: #f040f3; border: 3px solid #FFB6C1; }
+.dragon { background-color: #3263cc; border: 3px solid #4682B4; }

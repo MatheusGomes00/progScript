@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Aula 04 - V-MODEL e V-IF</title>
+</head>
+<body>
+    <div id="app">
+        <h1>V-MODEL</h1>
+        <label for="">Primeiro Nome</label>
+        <input type="text" v-model="primeiroNome">
+        <br>
+        <br>
+        <label for="">Último Nome: </label>
+        <input type="text" v-model="ultimoNome">
+
+        <h1 v-if="!primeiroNome">Olá, Fulano</h1>
+        <h1 v-else-if="ultimoNome">Olá, {{primeiroNome}} {{ultimoNome}}</h1>
+        <br>
+        <hr>
+        <br>
+        <button v-if="!ligado" @click="alternar()">Ligar</button>
+        <button v-else-if="ligado" @click="alternar()">Desligar</button>
+        <br>
+        <label for="">"Ligar" ou "Desligar"</label>
+        <input type="text" v-model="entradaDesligada" @input="verificarEntrada">
+        <img v-if="!ligado" src="images/off.png" width="250px">
+        <img v-else-if="ligado" src="images/on.png" width="250px">
+        <br>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
